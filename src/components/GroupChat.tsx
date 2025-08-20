@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Users, Heart, MessageCircle, ArrowLeft } from 'lucide-react'
+import Image from 'next/image'
 
 interface ChatMessage {
   id: string
@@ -149,9 +150,16 @@ export default function GroupChat({ onBack }: GroupChatProps) {
             <h1 className="text-lg font-semibold text-gray-900">AI Code Review Group</h1>
             <p className="text-sm text-gray-500">4 members • Active now</p>
           </div>
-          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <Users className="w-5 h-5 text-gray-600" />
-          </button>
+          <div className="w-8 h-8">
+            <Image
+              src="/resonance-logo.jpg"
+              alt="Programmer Connection Logo"
+              width={32}
+              height={32}
+              className="rounded-lg"
+              priority
+            />
+          </div>
         </div>
       </header>
 

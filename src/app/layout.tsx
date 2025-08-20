@@ -7,6 +7,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Programmer Connection - Real Connections, No Vanity',
   description: 'Connect with fellow programmers through genuine resonance, not likes or followers.',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/resonance-logo.ico',
+    shortcut: '/resonance-logo.ico',
+    apple: '/resonance-logo.ico',
+  },
 }
 
 export default function RootLayout({

@@ -16,6 +16,7 @@ import {
   Zap,
   MessageSquare
 } from 'lucide-react'
+import Image from 'next/image'
 import GroupChat from './GroupChat'
 
 interface FlowItem {
@@ -125,8 +126,15 @@ export default function Dashboard() {
       <header className="bg-white border-b border-gray-100 px-4 py-4">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <Users className="w-6 h-6 text-white" />
+            <div className="w-10 h-10">
+              <Image
+                src="/resonance-logo.jpg"
+                alt="Programmer Connection Logo"
+                width={40}
+                height={40}
+                className="rounded-xl"
+                priority
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Programmer Connection</h1>
